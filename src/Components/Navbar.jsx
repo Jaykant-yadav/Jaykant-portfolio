@@ -1,8 +1,6 @@
 
-// src/components/Navbar.jsx
 import { NavLink } from "react-router-dom";
-import "./assets/Style.css"; // Import your CSS file for styles
-
+import './Navbar.css'
 function Navbar() {
     const navItems = [
         { name: "Home", path: "/" },
@@ -18,11 +16,11 @@ function Navbar() {
         <nav className="sticky top-0">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center grid grid-cols-6 gap-4 ">
                 <div className="">
-                    <h1 className="text-xl font-bold text-gray-800 text-cyan-50">J</h1>
+                    <h1 className="text-xl font-bold text-gray-800 text-white">Jaykant</h1>
                 </div>
-                <div className="hidden md:flex space-x-6 col-start-3 col-span-2 text-center justify-around Navbar-items">
+                <div className="hidden md:flex space-x-6 p-2 font-light px-4 col-start-3 col-span-2 text-center justify-around Navbar-items">
                     {navItems.map((item) => (
-                        <NavLink
+                        <NavLink 
                             key={item.path}
                             to={item.path}
                             className={({ isActive }) =>
@@ -32,7 +30,7 @@ function Navbar() {
                                 }`
                             }
                         >
-                            {item.name}
+                            <p className="text-slate-300 text-sm">{item.name}</p>
                         </NavLink>
                     ))}
 

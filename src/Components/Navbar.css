@@ -1,0 +1,10 @@
+/* Navbar Styles */
+.Navbar-items{
+    background-color: rgba(53, 53, 52, 0.236) !important;
+    border-radius: 18px;
+    
+}
+
+.Navbar-items NavLink {
+    color: azure;
+}
