@@ -2,41 +2,62 @@ import React from 'react'
 
 export default function HeroSection() {
     return (
-        <div className='inset-0 -z-10 h-full w-full items-center [background:radial-gradient(200%_50%_at_20%_50%,#000_70%,#63e_250%)]'>
-            <section className="min-h-screen flex flex-col items-center justify-center text-center">
-                {/* Tagline */}
-                <span className='text-white mb-1 bg-slate-500 rounded-lg p-1 text-sm font-semibold font-sans'>Next Project Coming soon...</span>
-                <p className="text-gray-500 font-serif md:text-4xl mb-3 mt-8">
-                    Transforming <span className="text-blue-600 font-medium">ideas</span> into
-                    <span className="text-purple-600 font-medium"> pixel-perfect web experiences</span>.
-                </p>
+        <section className="w-full py-28 flex items-center justify-center px-5 md:px-12 lg:px-24 bg-transparent">
+            <div className="max-w-6xl w-full flex flex-col-reverse md:flex-row -inset-y-px justify-around gap-10">
 
-                {/* Name */}
-                <h1 className="text-4xl md:text-2xl font-bold text-gray-800 mb-2">
-                    Hello, I'm <span className="text-blue-600">Jaykant Yadav</span>
-                </h1>
+                {/* ⬅️ Left Side: Text */}
+                <div className="w-full md:w-1/2 text-center md:text-left mx-5">
+                    {/* Tagline */}
+                    <p className="text-gray-400 text-lg mb-2">
+                        Transforming <span className="text-blue-500 font-semibold">ideas</span> into
+                        <span className="text-purple-500 font-semibold"> pixel-perfect web experiences</span>.
+                    </p>
 
-                {/* Title */}
-                <p className="text-lg md:text-2xl text-gray-700 mb-6">
-                    a <span className="text-green-600 font-semibold">Full Stack Developer</span>
-                </p>
+                    {/* Name */}
+                    <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                        Hi, I'm <span className="text-blue-500">Jaykant Yadav</span>
+                    </h1>
+
+                    {/* Role */}
+                    <p className="text-xl md:text-2xl text-gray-300 mt-3">
+                        A passionate <span className="text-green-400 font-semibold">Full Stack Developer</span>
+                    </p>
+
+                    {/* CTA */}
+                    <div className='flex flex-row gap-5'>
+                        <div>
+                            <a
+                                href="mailto:hello@jaykant.dev"
+                                className="inline-block mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+                            >
+                                HIRE ME
+                            </a>
+                        </div>
+                        <div>
+                            <div>
+                            <a
+                                href="mailto:hello@jaykant.dev"
+                                className="inline-block mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+                            >
+                                Download CV
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 {/* Profile Image */}
-                <img
-                    src="/profile.png"  // ✅ Place your image in public/profile.png
-                    alt="Jaykant Yadav"
-                    className="w-32 h-32 rounded-full shadow-lg border-4 border-blue-100 mb-6"
-                />
+                <div className="w-full md:w-1/2 flex justify-center md:justify-end mx-12 ">
+                    <img
+                        src="/JaykantPic.jpg" // put your image inside public/profile.png
+                        alt="Jaykant Yadav"
+                        className="w-60 h-75 md:w-72 md:h-80 rounded-2xl ring-2 ring-blue-500  border-blue-500 shadow object-cover shadow-lg shadow-indigo-500/50"
+                    />
+                </div>
 
-                {/* Contact Button */}
-                <a
-                    href="mailto:hello@jaykant.dev"
-                    className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
-                >
-                    Let's Connect — hello@jaykant.dev
-                </a>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 
